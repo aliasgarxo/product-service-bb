@@ -1,14 +1,11 @@
-# product-service
 
-This is a Rust app that simulates a product catalog. It is meant to be used in conjunction with the store-front and store-admin apps.
+# Product Service
 
-This app is a simple REST API that allows you to get a list of products, get a single product, update a product, and add a product.
-
-Products are loaded into memory and not persisted. So if the app is restarted, the products will be reloaded.
+This is a Rust-based API for the Best Buy product catalog. It allows employees to manage product inventory and customers to view product details.
 
 ## Running the app locally
 
-The app does not rely on any other services, so you can run it locally without any other services running.
+The app runs independently of other services, so you can test it directly.
 
 ### Prerequisites
 
@@ -16,20 +13,17 @@ The app does not rely on any other services, so you can run it locally without a
 
 ### Running the app
 
-To run the app, clone the repo, open a terminal, and navigate to the `product-service` directory. Then run the following command:
+Clone the repository, navigate to the `product-service` directory, and execute:
 
 ```bash
 cargo run
 ```
 
-When the app is running, you should see output similar to the following:
+When the app starts, you’ll see:
 
 ```text
-    Finished dev [unoptimized + debuginfo] target(s) in 0.16s
-     Running `target/debug/product-service`
 Listening on http://0.0.0.0:3002
-[2023-06-28T02:44:47Z INFO  actix_server::builder] starting 16 workers
-[2023-06-28T02:44:47Z INFO  actix_server::server] Actix runtime found; starting in Actix runtime
 ```
 
-Using the [`test-product-service.http`](./test-product-service.http) file in the root of the repo, you can test the API. However, you will need to use VS Code and have the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed.# product-service-bb
+Test the API using the `test-product-service.http` file in VS Code with the REST Client extension.
+    
